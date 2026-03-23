@@ -12,7 +12,7 @@ export const shows = [
     id: 2,
     artist: "Chaos Eater",
     city: "Cleveland",
-    venue: "No Class",
+    venue: "The Agora",
     date: "2026-05-03",
     support: "Grave Signal",
     price: "$15"

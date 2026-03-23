@@ -1,6 +1,6 @@
 # Live Events Dashboard
 
-A vanilla JavaScript project built to demonstrate dynamic frontend behavior with a music-events use case.
+A vanilla JavaScript project built to demonstrate dynamic frontend behavior with a live events dashboard for a fictional band from NE Ohio.
 
 ## Features
 - Search by city or venue
@@ -10,12 +10,6 @@ A vanilla JavaScript project built to demonstrate dynamic frontend behavior with
 - Save favorite shows with localStorage
 - Responsive layout
 - Modular JavaScript structure
-
-## Run locally
-Because this project uses ES modules, run it with a local server.
-
-### Easy option
-Open the folder in VS Code and use the Live Server extension.
 
 ## File structure
 - `index.html` – page structure
