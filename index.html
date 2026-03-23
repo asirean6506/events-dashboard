@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Events Dashboard</title>
+  <meta
+    name="description"
+    content="Interactive live events dashboard with search, filtering, sorting, favorites, and list/grid view toggles."
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <p class="eyebrow">Frontend Project</p>
+        <h1>Live Events Dashboard</h1>
+        <p class="hero-copy">
+          Search, filter, sort, and save upcoming shows in a responsive dashboard.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-layout">
+    <section class="controls-panel" aria-labelledby="controls-heading">
+      <div class="panel-heading">
+        <h2 id="controls-heading">Browse Events</h2>
+        <p>Use the controls below to search and organize the show list.</p>
+      </div>
+
+      <div class="controls-grid">
+        <label class="control-group">
+          <span>Search</span>
+          <input
+            id="search-input"
+            type="text"
+            placeholder="Search by city or venue"
+            autocomplete="off"
+          />
+        </label>
+
+        <label class="control-group">
+          <span>City</span>
+          <select id="city-filter">
+            <option value="all">All Cities</option>
+          </select>
+        </label>
+
+        <label class="control-group">
+          <span>Sort</span>
+          <select id="sort-select">
+            <option value="date-asc">Date: Soonest First</option>
+            <option value="date-desc">Date: Latest First</option>
+            <option value="city-asc">City: A to Z</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="toolbar-row">
+        <div class="view-toggle" role="group" aria-label="Toggle event layout">
+          <button id="list-view-btn" class="toggle-btn active" type="button">List View</button>
+          <button id="grid-view-btn" class="toggle-btn" type="button">Grid View</button>
+        </div>
+
+        <button id="show-favorites-btn" class="secondary-btn" type="button" aria-pressed="false">
+          Show Favorites Only
+        </button>
+      </div>
+    </section>
+
+    <section class="results-panel" aria-labelledby="results-heading">
+      <div class="results-header">
+        <div>
+          <h2 id="results-heading">Upcoming Shows</h2>
+          <p id="results-summary">Loading events...</p>
+        </div>
+
+        <button id="clear-filters-btn" class="text-btn" type="button">
+          Clear Filters
+        </button>
+      </div>
+
+      <div id="shows-container" class="shows-container list-view" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <template id="empty-state-template">
+    <div class="empty-state">
+      <h3>No shows match those filters.</h3>
+      <p>Try another city, search term, or turn off favorites-only mode.</p>
+    </div>
+  </template>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
